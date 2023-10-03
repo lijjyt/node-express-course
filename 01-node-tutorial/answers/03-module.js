@@ -1,0 +1,10 @@
+const names = require("./04-names.js")
+const sayHello = require("./05-utils.js")
+const data = require("./06-alternative-flavor.js")
+require("./07-mind-grenade.js")
+
+sayHello('Joe')
+console.log(names)
+sayHello(names.john)
+console.log(data.aPerson)
+console.log(data.items)
