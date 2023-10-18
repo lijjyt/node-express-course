@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div>
+        <button id="button"> PRODUCTS </button>
+    </div>
+    <div id="products"> </div>
+
+    <script>
+        document.getElementById('button').addEventListener('click', function() {
+            fetch('/api/v1/products')
+                .then(response => response.json())
+                console.log(response)
+                .then(data => {
+                    const productList = document.getElementById('products');
+                     productList.innerHTML = '';
+
+                    products.forEach(product => {
+                        productList.innerHTML += `<p>${product.name}</p>`;
+                    });
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                }); 
+        })
+    </script>
+
+</body>
+</html>
