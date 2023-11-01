@@ -54,7 +54,7 @@ object.behavior()
 //
 // - Array.prototype.push (does not take a callback)
 //
-// These guys all take a callback as input, and then call the callabck for
+// These guys all take a callback as input, and then call the callback for
 // each item in the array
 //
 // - Array.prototype.filter

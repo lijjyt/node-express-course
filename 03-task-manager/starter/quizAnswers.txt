@@ -1,0 +1,3 @@
+1. middleware is used to declutter the base run file while also being able apply functions to specific routes; therefore allowing executable functions to log, modify or process incoming requests
+2. CRUD stands for create, read, update, and delete. this is a reference to post, get, put or patch, and the delete requests
+3. We have to require the dotenv file then reference the string. We add it to .gitignore so the dotenv isnt uploaded as well
