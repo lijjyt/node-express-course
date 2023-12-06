@@ -1,0 +1,12 @@
+1. We created the middleware asyncWrapper so that we can streamline our try catch blocks in controllers
+
+const getTask = asyncWrapper(async (req, res, next) => {
+  const { id: taskID } = req.params;
+  const task = await Task.findOne({ _id: taskID });
+  if (!task) {
+    return next(createCustomError(`no task with ID : ${taskID}`, 404)) 
+  }
+  res.status(200).json({ task });
+});
+
+assuming the error handler is called createCustomError
