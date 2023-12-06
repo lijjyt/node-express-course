@@ -1,11 +1,13 @@
 const jwt = require('jsonwebtoken')
+const { BadRequestError } = require('../middleware/customErrors')
 
 const login = async (req,res) =>{
     const { name, password } = req.body
 
     if (!name || !password) {
-        throw new Error('Please provide name and password');
+        throw new BadRequestError('Please provide name and password');
     }
+
 
     const secretKey = process.env.JWT_SECRET;
 
